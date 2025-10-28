@@ -1,0 +1,2 @@
+module Admin::SegurosHelper
+end

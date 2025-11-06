@@ -3,6 +3,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Cores Principais */
+  --cor-primaria: #1E202C;       /* Escuro/Forte (Títulos, Header) */
+  --cor-secundaria: #5DBDC3;     /* Destaque/Ação (Botões, Links) */
+  --cor-terciaria: #77D3FF;      /* Alerta/Info (Notificações, Selos) */
+  
+  /* Cores Neutras e de Texto */
+  --cor-texto-principal: #4B525B; /* Texto do Corpo (Parágrafos) */
+  --cor-texto-medio: #8A8D93;    /* Texto Secundário (Descrições, Datas) */
+  --cor-neutra-escura: #454545;  /* Neutro Escuro (Ícones, Elementos discretos) */
+  --cor-borda: #828282;          /* Bordas e Separadores */
+  
+  /* Cores de Fundo (Claras) */
+  --cor-fundo-principal: #F5F5F5; /* Fundo principal da página */
+  --cor-fundo-alternativo: #FAFAF8; /* Fundo de Cards ou Seções Alternadas */
+}
+
 @layer base {
   body {
     font-family: 'Open Sans', sans-serif;
@@ -14,10 +31,32 @@
 
 @layer utilities {
   .font-maven {
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Maven Pro', sans-serif; /* Títulos e Cabeçalhos */
   }
   
   .font-open {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Texto do Corpo e Parágrafos */
   }
+
+  /* classes de backgroud (bg-*) */
+  .bg-primaria { background-color: var(--cor-primaria); }
+  .bg-secundaria { background-color: var(--cor-secundaria); }
+  .bg-terciaria { background-color: var(--cor-terciaria); }
+  .bg-fundo-principal { background-color: var(--cor-fundo-principal); }
+  .bg-fundo-alternativo { background-color: var(--cor-fundo-alternativo); }
+  .bg-neutra-escura { background-color: var(--cor-neutra-escura); } /* Se precisar de fundo escuro neutro */
+
+
+  /* classes de texto (text-*) */
+  .text-primaria { color: var(--cor-primaria); }
+  .text-secundaria { color: var(--cor-secundaria); }
+  .text-terciaria { color: var(--cor-terciaria); }
+  .text-texto-principal { color: var(--cor-texto-principal); }
+  .text-texto-medio { color: var(--cor-texto-medio); }
+  .text-neutra-escura { color: var(--cor-neutra-escura); }
+
+  /* classes de borda (border-*) */
+  .border-primaria { border-color: var(--cor-primaria); }
+  .border-secundaria { border-color: var(--cor-secundaria); }
+  .border-borda { border-color: var(--cor-borda); }
 }
